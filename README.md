@@ -13,4 +13,4 @@ Read more [here](https://www.cuketest.com/playwright/docs/intro).
 ### CI run
 - request collaborator access in order to have permissions to run workflow (email to tchumakina@gmail.com with your email)
 - accept invitation to the project
-- go to project Actions > All workflows > Cypress Tests and press "Run workflow" and run workflow against Main branch
+- go to project Actions > All workflows > Playwright Tests and press "Run workflow" and run workflow against main branch
