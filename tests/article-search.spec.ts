@@ -15,13 +15,13 @@ test.describe('Article search tests', () => {
     });
 
     test('Existing article', async () => {
-            const searchString = 'Rondje Loetje aan de plas leert: smalle weg';
-            await homePage.searchIcon.click();
-            await homePage.searchInput.type(searchString);
-            await homePage.searchButton.click();
-            await expect(searchPage.resultItem).toHaveCount(1);
-            await expect(searchPage.resultMessage).toContainText(searchString);
-        });
+        const searchString = 'Rondje Loetje aan de plas leert: smalle weg';
+        await homePage.searchIcon.click();
+        await homePage.searchInput.type(searchString);
+        await homePage.searchButton.click();
+        await expect(searchPage.resultItem).toHaveCount(1);
+        await expect(searchPage.resultMessage).toContainText(searchString);
+    });
 
     test('Unexisting article', async () => {
         const searchString = "@$@(*@(#*";
