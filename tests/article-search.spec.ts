@@ -19,7 +19,7 @@ test.describe('Article search tests', () => {
         await homePage.searchIcon.click();
         await homePage.searchInput.type(searchString);
         await homePage.searchButton.click();
-        await expect(searchPage.resultItem).toHaveCount(1);
+        await expect(searchPage.searchResults).toHaveCount(1);
         await expect(searchPage.resultMessage).toContainText(searchString);
     });
 
@@ -28,7 +28,7 @@ test.describe('Article search tests', () => {
         await homePage.searchIcon.click();
         await homePage.searchInput.type(searchString);
         await homePage.searchButton.click();
-        await expect(searchPage.resultItem).toBeHidden();
+        await expect(searchPage.searchResults).toBeHidden();
         await expect(searchPage.resultMessage).toContainText(searchString);
     });
 

@@ -22,4 +22,10 @@ export class HomePage {
         await this.page.goto('https://www.ad.nl/');
     }
 
+    async getRandomTile() {
+        const tiles = await this.page.locator('.tile-grid > .tile');
+        const tilesCount = await tiles.count();
+        return tiles.nth(Math.floor(Math.random() * tilesCount));
+    }
+
 }
