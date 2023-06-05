@@ -50,4 +50,13 @@ test.describe('Login tests', () => {
         await loginPage.loginButton.click();
         await expect(homePage.loginButton).toBeHidden();
     })
+
+    //test is skipped due to account blockage due to automatic blocking by dpg
+    test.skip('Valid user with incorrect password', async () => {
+        await loginPage.usernameInput.type(adnlUser.username);
+        await loginPage.continueButton.click();
+        await loginPage.passwordInput.type('abcd');
+        await loginPage.loginButton.click();
+        await expect(loginPage.wrongPasswordMessage).toContainText('Wachtwoord is niet correct');
+    })
 });

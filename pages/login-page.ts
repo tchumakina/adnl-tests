@@ -8,6 +8,7 @@ export class LoginPage {
     readonly loginButton: Locator;
     readonly wrongEmailMessage: Locator;
     readonly requiredFieldMessage: Locator;
+    readonly wrongPasswordMessage: Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -17,6 +18,7 @@ export class LoginPage {
         this.loginButton = page.locator('text="Log in"');
         this.wrongEmailMessage = page.locator('#errorBlock-ValidEmail');
         this.requiredFieldMessage = page.locator('#errorBlock-NotEmpty');
+        this.wrongPasswordMessage = page.locator('.text-input-component_wrapper >> span');
     }
 
 }
