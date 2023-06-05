@@ -36,5 +36,7 @@ test.describe('Article search tests', () => {
         await homePage.searchIcon.click();
         await homePage.searchButton.click();
         await expect(searchPage.resultMessage).toContainText('Resultaten voor “” gevonden');
+        await expect(searchPage.searchResults).toHaveCount(10);
+        await expect(searchPage.pagination).toBeVisible();
     });
 });
